@@ -1,7 +1,5 @@
 package com.app.efa.views.MainView;
-
-
-
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
@@ -21,12 +19,10 @@ public class AboutView extends VerticalLayout {
         add(new H2("This place is where we write about our company" +
                 "ethiofreelancing platform place where ou can find your dream jobs" +
                 "and skilled freelancer"));
-        add(new Paragraph("It’s a place where you can grow my own ui 🤗"));
-
+        add(new Paragraph("It’s a place 🤗"),new Button("hello9999"));
         setSizeFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
         getStyle().set("text-align", "center");
     }
-
 }

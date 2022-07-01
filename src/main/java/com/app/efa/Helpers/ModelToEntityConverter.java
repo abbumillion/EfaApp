@@ -32,7 +32,6 @@ public class ModelToEntityConverter {
                 .build();
         return user;
     }
-
     public static Address UserAddressConverter(UserModel userModel)
     {
         Address address = Address.builder()
@@ -41,9 +40,5 @@ public class ModelToEntityConverter {
                 .country(userModel.getCountry())
                 .build();
         return address;
-//        address.setCity(adminModel.getCity());
-//        address.setState(adminModel.getState());
-//        address.setCountry(adminModel.getCountry());
-
     }
 }

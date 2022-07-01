@@ -1,6 +1,6 @@
 package com.app.efa.views.MainView;
 
-import com.app.efa.views.AdminView.AdminView;
+import com.app.efa.views.AdminView.AdminDashboard;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -34,18 +34,14 @@ public class MainView extends AppLayout {
             RouterLink link = new RouterLink();
             link.addClassNames("menu-item-link");
             link.setRoute(view);
-
             Span text = new Span(menuTitle);
             text.addClassNames("menu-item-text");
-
             link.add(new LineAwesomeIcon(iconClass), text);
             add(link);
         }
-
         public Class<?> getView() {
             return view;
         }
-
         /**
          * Simple wrapper to create icons using LineAwesome iconset. See
          * https://icons8.com/line-awesome
@@ -59,11 +55,8 @@ public class MainView extends AppLayout {
                 }
             }
         }
-
     }
-
     private H1 viewTitle;
-
     public MainView() {
         setPrimarySection(Section.DRAWER);
         addToNavbar(true, createHeaderContent());
@@ -75,55 +68,43 @@ public class MainView extends AppLayout {
         toggle.addClassNames("view-toggle");
         toggle.addThemeVariants(ButtonVariant.LUMO_CONTRAST);
         toggle.getElement().setAttribute("aria-label", "Menu toggle");
-
         viewTitle = new H1();
         viewTitle.addClassNames("view-title");
-
         Header header = new Header(toggle, viewTitle);
         header.addClassNames("view-header");
         return header;
     }
-
     private Component createDrawerContent() {
         H2 appName = new H2("Green Dembel ");
         appName.addClassNames("app-name");
-
         com.vaadin.flow.component.html.Section section = new com.vaadin.flow.component.html.Section(appName,
                 createNavigation(), createFooter());
         section.addClassNames("drawer-section");
         return section;
     }
-
     private Nav createNavigation() {
         Nav nav = new Nav();
         nav.addClassNames("menu-item-container");
         nav.getElement().setAttribute("aria-labelledby", "views");
-
         // Wrap the links in a list; improves accessibility
         UnorderedList list = new UnorderedList();
         list.addClassNames("navigation-list");
         nav.add(list);
-
         for (MenuItemInfo menuItem : createMenuItems()) {
             list.add(menuItem);
-
         }
         return nav;
     }
-
     private MenuItemInfo[] createMenuItems() {
         return new MenuItemInfo[]{ //
-                new MenuItemInfo("Green Dembel", "la la-th-list", AdminView.class), //
-
-                new MenuItemInfo("About", "la la-file", AboutView.class), //
-
+                new MenuItemInfo("Dashboard", "la la-th-list", AdminDashboard.class), //
+                new MenuItemInfo("login", "la la-file", LoginView.class), //
         };
     }
 
     private Footer createFooter() {
         Footer layout = new Footer();
         layout.addClassNames("footer");
-
         return layout;
     }
 

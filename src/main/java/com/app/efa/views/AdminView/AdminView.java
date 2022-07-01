@@ -14,16 +14,13 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 
-@PageTitle("Green Dembel")
+@PageTitle("Ethiopian Freelancing")
 @Route(value = "hello", layout = MainView.class)
-@RouteAlias(value = "", layout = MainView.class)
+@RouteAlias(value = "adminhome", layout = MainView.class)
 public class AdminView extends Main implements HasComponents, HasStyle {
-
     private OrderedList imageContainer;
-
     public AdminView() {
         constructUI();
-
         imageContainer.add(new AdminCardView("Snow mountains under stars",
                 "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"));
         imageContainer.add(new AdminCardView("Snow covered mountain",
@@ -45,7 +42,7 @@ public class AdminView extends Main implements HasComponents, HasStyle {
         VerticalLayout headerContainer = new VerticalLayout();
         H2 header = new H2("Beautiful photos");
         header.addClassNames("mb-0", "mt-xl", "text-3xl");
-        Paragraph description = new Paragraph("Royalty free photos and pictures, courtesy of Unsplash");
+        Paragraph description = new Paragraph("gallery");
         description.addClassNames("mb-xl", "mt-0", "text-secondary");
         headerContainer.add(header, description);
         Select<String> sortBy = new Select<>();
