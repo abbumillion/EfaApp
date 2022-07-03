@@ -7,13 +7,13 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Admin Dashboard")
-@Route(value = "/")
+@Route(value = "LAN")
 public class LandingView extends View {
     //progress bar
     private ProgressBar progressBar;
     //label
     Div progressBarLabel;
-
+    //
     @Override
     public void init() {
         progressBar = new ProgressBar();
@@ -23,28 +23,40 @@ public class LandingView extends View {
                 "Application\n" +
                 "Please Wait...");
     }
+    
 
     @Override
-    public void constructUI() {
+    public void constructUI()
+    {
+        //
         add(progressBarLabel, progressBar);
+        //
     }
 
     @Override
-    public void bindingOperations() {
+    public void bindingOperations()
+    {
 
     }
 
     @Override
-    public void alignElements() {
-        setAlignItems(Alignment.BASELINE);
+    public void alignElements()
+    {
 
     }
 
-    public ProgressBar getProgressBar() {
+    @Override
+    public void addEvents() {
+
+    }
+
+    public ProgressBar getProgressBar()
+    {
         return progressBar;
     }
 
-    public Div getProgressBarLabel() {
+    public Div getProgressBarLabel()
+    {
         return progressBarLabel;
     }
 }

@@ -1,6 +1,7 @@
 package com.app.efa.views.MainView;
 
 import com.app.efa.views.AdminView.AdminDashboard;
+import com.app.efa.views.Listviews.*;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -75,7 +76,7 @@ public class MainView extends AppLayout {
         return header;
     }
     private Component createDrawerContent() {
-        H2 appName = new H2("Green Dembel ");
+        H2 appName = new H2("Ethio-Freelancing");
         appName.addClassNames("app-name");
         com.vaadin.flow.component.html.Section section = new com.vaadin.flow.component.html.Section(appName,
                 createNavigation(), createFooter());
@@ -98,7 +99,14 @@ public class MainView extends AppLayout {
     private MenuItemInfo[] createMenuItems() {
         return new MenuItemInfo[]{ //
                 new MenuItemInfo("Dashboard", "la la-th-list", AdminDashboard.class), //
-                new MenuItemInfo("login", "la la-file", LoginView.class), //
+                new MenuItemInfo("Jobs", "la la-file", JobsListview.class), //
+                new MenuItemInfo("Job applications", "la la-file", JobApplicationListview.class), //
+                new MenuItemInfo("Freelancers", "la la-file", FreelancerListview.class), //
+                new MenuItemInfo("Customers", "la la-file", CustomerListview.class), //
+                new MenuItemInfo("Admins", "la la-file", AdminsListview.class), //
+                new MenuItemInfo("Feedbacks", "la la-file", FeedbackListview.class), //
+                new MenuItemInfo("Contact us", "la la-file", ContactUsView.class), //
+                new MenuItemInfo("About us", "la la-file", AboutView.class), //
         };
     }
 

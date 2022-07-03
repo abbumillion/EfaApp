@@ -5,4 +5,5 @@ public interface Viewable {
     void constructUI();
     void bindingOperations();
     void alignElements();
+    void addEvents();
 }

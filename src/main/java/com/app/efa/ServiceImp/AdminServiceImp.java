@@ -1,5 +1,4 @@
 package com.app.efa.ServiceImp;
-
 import java.util.ArrayList;
 import java.util.List;
 import com.app.efa.Helpers.EntityToModelConverter;
@@ -10,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.app.efa.Entity.Admin;
 import com.app.efa.Repository.AdminRepo;
-
 @Service
 public class AdminServiceImp implements AdminService {
 	private AdminRepo adminRepo;
@@ -19,19 +17,16 @@ public class AdminServiceImp implements AdminService {
 	{
 		this.adminRepo = adminRepo;
 	}
-
 	@Override
 	public void add_admin(AdminModel adminModel)
 	{
 		adminRepo.save(ModelToEntityConverter.AdminModelToAdminEntity(adminModel));
 	}
-
 	@Override
 	public AdminModel get_admin(long id)
 	{
 		return EntityToModelConverter.AdminEntityToAdminModel(adminRepo.getReferenceById(id));
 	}
-
 	@Override
 	public List<AdminModel> all_admin()
 	{
@@ -43,19 +38,16 @@ public class AdminServiceImp implements AdminService {
 		});
 		return adminModels;
 	}
-
 	@Override
 	public Admin update_admin(long id)
 	{
 		return null;
 	}
-
 	@Override
 	public void delete_admin(long id)
 	{
 		adminRepo.deleteById(id);
 	}
-
 	@Override
 	public void delete_all()
 	{

@@ -15,7 +15,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 
 @PageTitle("Ethiopian Freelancing")
-@Route(value = "hello", layout = MainView.class)
+@Route(value = "/", layout = MainView.class)
 @RouteAlias(value = "adminhome", layout = MainView.class)
 public class AdminView extends Main implements HasComponents, HasStyle {
     private OrderedList imageContainer;
