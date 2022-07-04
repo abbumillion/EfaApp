@@ -3,7 +3,7 @@ import com.app.efa.views.ViewBase.View;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.router.Route;
 
-@Route(value = "Contact us", layout = MainView.class)
+@Route(value = "Contactus", layout = MainView.class)
 public class ContactUsView extends View {
     //label
     private Label label;

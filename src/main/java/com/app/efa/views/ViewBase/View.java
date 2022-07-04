@@ -24,7 +24,7 @@ public abstract class View extends VerticalLayout implements Viewable {
         getReady();
         setMargin(true);
         setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.CENTER);
-        setSizeFull();
+        setJustifyContentMode(JustifyContentMode.CENTER);
     }
     public void getReady()
     {

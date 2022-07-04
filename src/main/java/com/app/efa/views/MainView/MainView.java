@@ -105,8 +105,8 @@ public class MainView extends AppLayout {
                 new MenuItemInfo("Customers", "la la-file", CustomerListview.class), //
                 new MenuItemInfo("Admins", "la la-file", AdminsListview.class), //
                 new MenuItemInfo("Feedbacks", "la la-file", FeedbackListview.class), //
-                new MenuItemInfo("Contact us", "la la-file", ContactUsView.class), //
-                new MenuItemInfo("About us", "la la-file", AboutView.class), //
+                new MenuItemInfo("Contactus", "la la-file", ContactUsView.class), //
+                new MenuItemInfo("Aboutus", "la la-file", AboutView.class), //
         };
     }
 
