@@ -1,4 +1,4 @@
-package com.app.efa.views.MainView;
+package com.app.efa.views.SignUp;
 import com.app.efa.views.ViewBase.View;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.html.Label;

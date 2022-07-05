@@ -1,7 +1,7 @@
 package com.app.efa.Factory;
 
 import com.app.efa.views.MainView.LandingView;
-import com.app.efa.views.MainView.LoginView;
+import com.app.efa.views.login.LoginView;
 import com.app.efa.views.ViewBase.View;
 
 public class ViewFactory {

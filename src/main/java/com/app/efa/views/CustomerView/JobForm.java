@@ -1,20 +1,20 @@
-package com.app.efa.views.Tabs;
+package com.app.efa.views.CustomerView;
 
-import com.app.efa.views.Listviews.FreelancerListview;
 import com.app.efa.views.ViewBase.View;
+import com.vaadin.flow.component.formlayout.FormLayout;
 
-
-public class FreelancerListTab extends View {
-
-    private FreelancerListview freelancerListview;
+public class JobForm extends View
+{
+    private FormLayout formLayout;
     @Override
     public void init() {
-        freelancerListview = new FreelancerListview();
+        formLayout = new FormLayout();
     }
 
     @Override
     public void constructUI() {
-        add(freelancerListview);
+
+        add(formLayout);
     }
 
     @Override

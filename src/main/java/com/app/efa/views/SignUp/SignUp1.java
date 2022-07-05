@@ -1,6 +1,10 @@
-package com.app.efa.views.MainView;
+package com.app.efa.views.SignUp;
 
+import com.app.efa.views.AdminView.AdminView;
 import com.app.efa.views.ViewBase.View;
+import com.app.efa.views.login.LoginView;
+import com.vaadin.flow.component.UI;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.textfield.PasswordField;
 import com.vaadin.flow.component.textfield.TextField;
@@ -14,6 +18,8 @@ public class SignUp1 extends View {
     PasswordField password,confirmPassword;
     //
     TextField firstName,lastName,username;
+    //
+    private Button submitButton,loginButton;
     @Override
     public void init() {
          firstName = new TextField("First name");
@@ -21,7 +27,14 @@ public class SignUp1 extends View {
          username = new TextField("Username");
          password = new PasswordField("Password");
          confirmPassword = new PasswordField("Confirm password");
-
+         //
+        submitButton = new Button("Register",buttonClickEvent -> {
+            UI.getCurrent().navigate(AdminView.class);});
+        //
+        loginButton = new Button("sign in",buttonClickEvent ->
+        {
+            UI.getCurrent().navigate(LoginView.class);
+        });
          formLayout = new FormLayout();
 
     }
@@ -40,23 +53,25 @@ public class SignUp1 extends View {
                 new FormLayout.ResponsiveStep("500px", 2)
         );
        // Stretch the username field over 2 columns
-        formLayout.setColspan(username, 2);
+        formLayout.setColspan(username, 4);
 
         add(formLayout);
     }
 
     @Override
     public void bindingOperations() {
-
+        //we will bind the service layer with the view here
     }
 
     @Override
     public void alignElements() {
+        //for alignment of the view
 
     }
 
     @Override
     public void addEvents() {
-
+        //we can add some events here but it's prefered to do it
+        //during initilization
     }
 }
