@@ -12,31 +12,22 @@ import com.vaadin.flow.router.Route;
 @Route(value = "personinforegistration")
 public class UserPersonalInformationRegistrationView extends View {
     //let's declare all the necessary components here
-    private Label headerLabel,firstNameLabel,lastNameLabel,phoneLabel,passwordLabel,confirmPasswordLabel,emailLabel;
+    private Label headerLabel;
     private Button registerButton,loginButton;
     private TextField firstNameTF,lastNameTF,phoneTF,passwordTF,confirmPasswordTF;
     private EmailField emailTF;
     @Override
     public void init() {
-        //labels for the view
-        headerLabel = new Label("Sign Up here");
-        firstNameLabel = new Label("first name:");
-        lastNameLabel = new Label("last name:");
-        phoneLabel = new Label("phone:");
-        passwordLabel = new Label("password:");
-        confirmPasswordLabel = new Label("re-enter password:");
-        emailLabel = new Label("email:");
-        headerLabel = new Label("Sign Up here");
         //text-fields
-        firstNameTF = new TextField("first name");
-        lastNameTF = new TextField("last name");
-        passwordTF = new TextField("password");
-        confirmPasswordTF = new TextField("re-enter password");
-        phoneTF = new TextField("phone number");
-        emailTF = new EmailField("email");
-        //buttons
-        registerButton = new Button("submit");
-        loginButton = new Button("login");
+//        firstNameTF = new TextField("first name");
+//        lastNameTF = new TextField("last name");
+//        passwordTF = new TextField("password");
+//        confirmPasswordTF = new TextField("re-enter password");
+//        phoneTF = new TextField("phone number");
+//        emailTF = new EmailField("email");
+//        //buttons
+//        registerButton = new Button("submit");
+//        loginButton = new Button("login");
     }
 
     @Override

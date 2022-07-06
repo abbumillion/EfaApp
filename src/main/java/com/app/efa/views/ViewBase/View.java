@@ -52,8 +52,11 @@ public abstract class View extends VerticalLayout implements Viewable {
         setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
         //
-        headerParagraph.addClassNames("view-header");
-        footerParagraph.addClassNames("view-header");
+//        headerParagraph.addClassNames("view-header");
+//        footerParagraph.addClassNames("view-header");
+        headerParagraph.setSizeFull();
+        footerParagraph.setSizeFull();
+
         //
 
     }

@@ -1,6 +1,6 @@
 package com.app.efa.views.MainView;
 
-import com.app.efa.views.AdminView.AdminDashboard;
+import com.app.efa.views.HomeView.AdminDashboard;
 import com.app.efa.views.Listviews.*;
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -65,7 +65,7 @@ public class MainView extends AppLayout {
         toggle.getElement().setAttribute("aria-label", "Menu toggle");
         viewTitle = new H1();
         viewTitle.addClassNames("view-title");
-        Header header = new Header(toggle, viewTitle);
+        Header header = new Header(toggle, viewTitle,logout);
         header.addClassNames("view-header");
         return header;
     }
@@ -93,11 +93,11 @@ public class MainView extends AppLayout {
     private MenuItemInfo[] createMenuItems() {
         return new MenuItemInfo[]{ //
                 new MenuItemInfo("Dashboard", "la la-th-list", AdminDashboard.class), //
-                new MenuItemInfo("Jobs", "la la-file", JobsListview.class), //
+                new MenuItemInfo("Jobs", "la la-file", JobListview.class), //
                 new MenuItemInfo("Job applications", "la la-file", JobApplicationListview.class), //
                 new MenuItemInfo("Freelancers", "la la-file", FreelancerListview.class), //
                 new MenuItemInfo("Customers", "la la-file", CustomerListview.class), //
-                new MenuItemInfo("Admins", "la la-file", AdminsListview.class), //
+                new MenuItemInfo("Admins", "la la-file", AdminListview.class), //
                 new MenuItemInfo("Feedbacks", "la la-file", FeedbackListview.class), //
                 new MenuItemInfo("Contactus", "la la-file", ContactUsView.class), //
                 new MenuItemInfo("Aboutus", "la la-file", AboutView.class), //

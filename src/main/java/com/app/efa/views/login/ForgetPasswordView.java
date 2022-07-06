@@ -1,5 +1,6 @@
-package com.app.efa.views.MainView;
+package com.app.efa.views.login;
 
+import com.app.efa.views.MainView.MainView;
 import com.app.efa.views.ViewBase.View;
 import com.vaadin.flow.component.charts.model.Label;
 import com.vaadin.flow.router.Route;

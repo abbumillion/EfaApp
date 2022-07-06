@@ -1,6 +1,5 @@
 package com.app.efa.views.SignUp;
 
-import com.app.efa.views.AdminView.AdminView;
 import com.app.efa.views.ViewBase.View;
 import com.app.efa.views.login.LoginView;
 import com.vaadin.flow.component.UI;
@@ -12,7 +11,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("sign up")
-@Route(value = "signup")
+@Route(value = "signup1")
 public class SignUp1 extends View {
     FormLayout formLayout;
     PasswordField password,confirmPassword;
@@ -29,33 +28,43 @@ public class SignUp1 extends View {
          confirmPassword = new PasswordField("Confirm password");
          //
         submitButton = new Button("Register",buttonClickEvent -> {
-            UI.getCurrent().navigate(AdminView.class);});
+//            UI.getCurrent().navigate(.class);
+            //
+            //
+        });
         //
         loginButton = new Button("sign in",buttonClickEvent ->
         {
+            //
+            //
             UI.getCurrent().navigate(LoginView.class);
+            //
+            //
+
         });
          formLayout = new FormLayout();
-
     }
 
     @Override
     public void constructUI() {
-        formLayout.add(
-                firstName, lastName,
-                username,
-                password, confirmPassword
-        );
-        formLayout.setResponsiveSteps(
-                // Use one column by default
-                new FormLayout.ResponsiveStep("0", 1),
-                // Use two columns, if layout's width exceeds 500px
-                new FormLayout.ResponsiveStep("500px", 2)
-        );
-       // Stretch the username field over 2 columns
-        formLayout.setColspan(username, 4);
-
-        add(formLayout);
+//        formLayout.add(
+//                firstName, lastName,
+//                username,
+//                password, confirmPassword
+//        );
+//        formLayout.setResponsiveSteps(
+//                // Use one column by default
+//                new FormLayout.ResponsiveStep("0", 1),
+//                // Use two columns, if layout's width exceeds 500px
+//                new FormLayout.ResponsiveStep("500px", 2)
+//        );
+//       // Stretch the username field over 2 columns
+//        formLayout.setColspan(firstName, 2);
+//        formLayout.setColspan(lastName, 2);
+//        formLayout.setColspan(username, 2);
+//        formLayout.setColspan(password, 2);
+//        formLayout.setColspan(confirmPassword, 2);
+//        add(formLayout);
     }
 
     @Override

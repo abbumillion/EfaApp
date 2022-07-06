@@ -1,11 +1,10 @@
-package com.app.efa.views.AdminView;
+package com.app.efa.views.HomeView;
 
 import com.app.efa.views.MainView.MainView;
 import com.vaadin.flow.component.html.Label;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.RouteAlias;
 
 @PageTitle("Admin Dashboard")
 @Route(value = "admindashboard", layout = MainView.class)

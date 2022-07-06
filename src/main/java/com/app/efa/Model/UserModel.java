@@ -24,7 +24,8 @@ public abstract  class UserModel {
 	private String email;
 	// user's phone number
 	private String phoneNumber;
-	// user registration date
+	// user registration date initialized from the moment of creation of this particular
+	//user model object wit java date util class Date registrationDate = new Date();
 	private Date registrationDate = new Date();
 	// user profile picture
 	private String profilePicture;
@@ -40,7 +41,5 @@ public abstract  class UserModel {
 	private String country;
 	//user feedback
 	private List<FeedbackModel> userFeedback;
-
-
-
+	//
 }
