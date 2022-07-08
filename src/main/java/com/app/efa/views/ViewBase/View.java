@@ -44,16 +44,20 @@ public abstract class View extends VerticalLayout implements Viewable {
         footerParagraph = new Paragraph("Ethiopian Freelancing Application\n" +
                 "@copyright all right reserved. "+new Date());
         //
-        header.add(headerParagraph);
-        footer.add(footerParagraph);
+//        header.add(headerParagraph);
+        header.setTitle("Ethiopian Freelancing Application");
+        header.setText(headerParagraph.getText());
+        //
+        footer.setText(footerParagraph.getText());
+//        footer.add(footerParagraph);
         //------------------------------------------------------------------------------------------------------------//
         getReady();
         setMargin(true);
         setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.CENTER);
         setJustifyContentMode(JustifyContentMode.CENTER);
         //
-//        headerParagraph.addClassNames("view-header");
-//        footerParagraph.addClassNames("view-header");
+        headerParagraph.addClassNames("view-header");
+        footerParagraph.addClassNames("view-header");
         headerParagraph.setSizeFull();
         footerParagraph.setSizeFull();
 
@@ -75,5 +79,7 @@ public abstract class View extends VerticalLayout implements Viewable {
         //for alignment and other styling operations will be done in this
         //functional operation
         alignElements();
+        //adding styles here
+        addStyle();
     }
 }

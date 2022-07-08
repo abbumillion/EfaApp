@@ -36,11 +36,10 @@ public class LoginView extends View {
     {
         //
         loginForm.setTitle("Ethiopian Freelancing Application");
-        loginForm.setDescription("");
-
+        loginForm.setDescription("login here");
         loginForm.setOpened(true);
         loginForm.setForgotPasswordButtonVisible(true);
-        setDefaultHorizontalComponentAlignment(Alignment.BASELINE);
+//        setDefaultHorizontalComponentAlignment(Alignment.BASELINE);
         //
     }
     @Override
@@ -58,5 +57,9 @@ public class LoginView extends View {
         loginForm.addForgotPasswordListener(e->{
             UI.getCurrent().navigate(ForgetPasswordView.class);
         });
+    }
+    @Override
+    public void addStyle() {
+
     }
 }

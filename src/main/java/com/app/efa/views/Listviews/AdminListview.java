@@ -20,6 +20,7 @@ public class AdminListview extends View {
         testRepo = new TestRepo();
         //
         grid = new Grid<>(AdminModel.class, false);
+        grid.addColumn(AdminModel::getId).setHeader("Id");
         grid.addColumn(AdminModel::getFirstName).setHeader("First name");
         grid.addColumn(AdminModel::getLastName).setHeader("Last name");
         grid.addColumn(AdminModel::getEmail).setHeader("Email");
@@ -30,9 +31,15 @@ public class AdminListview extends View {
         grid.addColumn(AdminModel::getCountry).setHeader("Country");
         adminModels = testRepo.getAdminModels();
         grid.setItems(adminModels);
+
+
          //
     }
 
+    @Override
+    public void addStyle() {
+
+    }
     @Override
     public void constructUI() {
         //
@@ -50,7 +57,18 @@ public class AdminListview extends View {
         grid.scrollToIndex(20);
 //        grid.appendHeaderRow();
 //        grid.appendFooterRow();
-        grid.getColumns().
+        grid.getColumns().get(0).setWidth("50px");
+        grid.getColumns().get(1).setWidth("80px");
+        grid.getColumns().get(2).setWidth("80px");
+        grid.getColumns().get(2).setFrozenToEnd(true);
+        grid.getColumns().get(3).setWidth("250px");
+        grid.getColumns().get(4).setWidth("80px");
+        grid.getColumns().get(5).setWidth("250px");
+        grid.getColumns().get(6).setWidth("80px");
+        grid.getColumns().get(7).setWidth("80px");
+        grid.getColumns().get(8).setWidth("80px");
+        //
+        //
     }
 
     @Override

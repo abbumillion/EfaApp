@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 @SpringBootApplication
 @Theme(value = "mytodo")
-@PWA(name = "Ethiopian Freelancing Application", shortName = "Ethio-Freelancing", offlineResources = {})
+//@PWA(name = "Ethiopian Freelancing Application", shortName = "Ethio-Freelancing", offlineResources = {})
 @NpmPackage(value = "line-awesome", version = "1.3.0")
 public class Application extends SpringBootServletInitializer implements AppShellConfigurator {
     public static void main(String[] args)

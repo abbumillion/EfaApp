@@ -60,6 +60,10 @@ public class UserPersonalInformationRegistrationView extends View {
         h7.setVerticalComponentAlignment(Alignment.CENTER);
         setDefaultHorizontalComponentAlignment(Alignment.CENTER);
     }
+    @Override
+    public void addStyle() {
+
+    }
 
     @Override
     public void addEvents() {

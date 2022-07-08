@@ -17,13 +17,13 @@ public class TestRepo {
 //    public List<Admin> admins = new ArrayList<>();
 //    public List<Admin> admins = new ArrayList<>();
     //
-
     {
 
         for (int i = 0; i < 200; i++) {
             AdminModel adminModel = AdminModel.builder()
                     .level(i)
                     .build();
+            adminModel.setId(Math.round(Math.random()*100));
             adminModel.setCity("Ziway");
             adminModel.setState("Oromia");
             adminModel.setCountry("Ethiopia");

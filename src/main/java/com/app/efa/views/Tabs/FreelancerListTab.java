@@ -31,4 +31,9 @@ public class FreelancerListTab extends View {
     public void addEvents() {
 
     }
+
+    @Override
+    public void addStyle() {
+
+    }
 }

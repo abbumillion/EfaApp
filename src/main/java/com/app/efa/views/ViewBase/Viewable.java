@@ -13,4 +13,6 @@ public interface Viewable {
     void alignElements();
     //for binding some ui events to the backend
     void addEvents();
+    //adding styles
+    void addStyle();
 }

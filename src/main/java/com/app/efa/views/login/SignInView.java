@@ -43,4 +43,8 @@ public class SignInView extends View {
     public void addEvents() {
 
     }
+    @Override
+    public void addStyle() {
+
+    }
 }

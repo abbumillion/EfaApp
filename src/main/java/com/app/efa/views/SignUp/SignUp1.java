@@ -46,6 +46,10 @@ public class SignUp1 extends View {
     }
 
     @Override
+    public void addStyle() {
+
+    }
+    @Override
     public void constructUI() {
 //        formLayout.add(
 //                firstName, lastName,

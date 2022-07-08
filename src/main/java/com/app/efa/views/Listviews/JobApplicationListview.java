@@ -29,6 +29,10 @@ public class JobApplicationListview extends View {
         public void alignElements() {
 
         }
+        @Override
+        public void addStyle() {
+
+        }
 
         @Override
         public void addEvents() {

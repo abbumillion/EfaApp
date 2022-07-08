@@ -31,6 +31,10 @@ public class FeedbackListview extends View {
     }
 
     @Override
+    public void addStyle() {
+
+    }
+    @Override
     public void addEvents() {
 
     }

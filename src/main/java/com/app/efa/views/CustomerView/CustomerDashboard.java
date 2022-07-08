@@ -29,4 +29,8 @@ public class CustomerDashboard extends DashboardView {
     public void addEvents() {
 
     }
+    @Override
+    public void addStyle() {
+
+    }
 }

@@ -18,6 +18,10 @@ public class JobForm extends View
     }
 
     @Override
+    public void addStyle() {
+
+    }
+    @Override
     public void bindingOperations() {
 
     }

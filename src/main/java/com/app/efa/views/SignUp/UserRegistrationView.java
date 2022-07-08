@@ -4,6 +4,7 @@ import com.app.efa.views.ViewBase.View;
 import com.app.efa.views.login.LoginView;
 import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.button.Button;
+import com.vaadin.flow.component.button.ButtonVariant;
 import com.vaadin.flow.component.formlayout.FormLayout;
 import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.component.textfield.PasswordField;
@@ -15,7 +16,7 @@ import com.vaadin.flow.router.Route;
 @Route(value = "signup")
 public class UserRegistrationView extends View {
     //
-    FormLayout formLayout;
+//    FormLayout formLayout;
     //
     private Button registerButton,loginButton;
     //
@@ -48,47 +49,54 @@ public class UserRegistrationView extends View {
             UI.getCurrent().navigate(LoginView.class);
             //
         });
-        formLayout = new FormLayout();
+//        formLayout = new FormLayout();
     }
 
     @Override
     public void constructUI() {
         //------------------------------------------------------------------------------------------------------------//
-        h1.add(registerButton,loginButton);
-        h1.getStyle().set("flex-wrap", "wrap");
-        h1.setJustifyContentMode(JustifyContentMode.END);
+//        h1.add(registerButton);
+//        h1.getStyle().set("flex-wrap", "wrap");
+       h1.setJustifyContentMode(JustifyContentMode.END);
         //------------------------------------------------------------------------------------------------------------//
-        formLayout.add(
-                header,
-                firstNameTF, lastNameTF,
-                emailTF,phoneTF,
-                passwordTF, confirmPasswordTF,
-                h1,
-                footer
-        );
-        formLayout.setResponsiveSteps(
-                // Use one column by default
-                new FormLayout.ResponsiveStep("0", 2)
-                // Use two columns, if layout's width exceeds 500px
-//                new FormLayout.ResponsiveStep("500px", 2)
-        );
-        formLayout.setColspan(header, 2);
-        // Stretch the username field over 2 columns
-        formLayout.setColspan(firstNameTF, 1);
-        formLayout.setColspan(lastNameTF, 1);
+        h1.addAndExpand(header,loginButton);
+        h2.add(firstNameTF,lastNameTF);
+        h3.add(emailTF,phoneTF);
+        h4.add(passwordTF,confirmPasswordTF);
+        h5.add(registerButton);
+        h6.addAndExpand(footer);
+        //------------------------------------------------------------------------------------------------------------//
+        v1.add(h1,h2,h3,h4,h5,h6);
+
         //
-        formLayout.setColspan(emailTF, 1);
-        formLayout.setColspan(phoneTF, 1);
+//        formLayout.add(
+//                h1,h2,h3,h4,h5,h6
+//        );
+//        //
+////        formLayout.setResponsiveSteps(
+//                // Use one column by default
+//                new FormLayout.ResponsiveStep("0", 2)
+//                // Use two columns, if layout's width exceeds 500px
+////                new FormLayout.ResponsiveStep("500px", 2)
+//        );
+//        formLayout.setColspan(header, 2);
+//        // Stretch the username field over 2 columns
+//        formLayout.setColspan(firstNameTF, 1);
+//        formLayout.setColspan(lastNameTF, 1);
+//        //------------------------------------------------------------------------------------------------------------//
+//        formLayout.setColspan(emailTF, 1);
+//        formLayout.setColspan(phoneTF, 1);
+//        //
+//        formLayout.setColspan(passwordTF, 1);
+//        formLayout.setColspan(confirmPasswordTF, 1);
+//        //
+//        formLayout.setColspan(registerButton, 1);
+//        formLayout.setColspan(loginButton, 1);
+//        //
+//        formLayout.setColspan(footer, 2);
         //
-        formLayout.setColspan(passwordTF, 1);
-        formLayout.setColspan(confirmPasswordTF, 1);
-        //
-        formLayout.setColspan(registerButton, 2);
-        formLayout.setColspan(loginButton, 2);
-        //
-        formLayout.setColspan(footer, 2);
-        //
-        add(formLayout);
+//        add(formLayout);
+        addAndExpand(v1);
         //
     }
 
@@ -101,9 +109,16 @@ public class UserRegistrationView extends View {
     @Override
     public void alignElements()
     {
-
+        v1.setDefaultHorizontalComponentAlignment(Alignment.CENTER);
+        v1.setJustifyContentMode(JustifyContentMode.CENTER);
+        registerButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
+        loginButton.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
     }
 
+    @Override
+    public void addStyle() {
+
+    }
     @Override
     public void addEvents()
     {

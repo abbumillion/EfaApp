@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 
 public abstract  class UserModel {
+	private long id;
 	// user's first name
 	private String firstName;
 	// user's last name

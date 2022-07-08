@@ -33,4 +33,8 @@ public class ForgetPasswordView extends View {
     public void addEvents() {
 
     }
+    @Override
+    public void addStyle() {
+
+    }
 }
